@@ -33,7 +33,7 @@
         android:allowBackup="true"
         android:appCategory="social"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_launcher_name"
+        android:label="LeOS-Contacts"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

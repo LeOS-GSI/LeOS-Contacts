@@ -44,8 +44,6 @@ class SettingsActivity : SimpleActivity() {
         super.onResume()
         setupToolbar(settings_toolbar, NavigationIcon.Arrow)
 
-        setupPurchaseThankYou()
-        setupCustomizeColors()
         setupDefaultTab()
         setupManageShownTabs()
         setupBottomNavigationBar()
@@ -73,16 +71,12 @@ class SettingsActivity : SimpleActivity() {
         setupShowPrivateContacts()
         setupOnContactClick()
 
-        setupTipJar()
-        setupAbout()
         updateTextColors(settings_holder)
 
         arrayOf(divider_general, divider_list_view, divider_other).forEach {
             it.setBackgroundColor(getProperTextColor())
         }
-        arrayOf(settings_appearance_label, settings_general_label, settings_list_view_label, settings_other_label).forEach {
-            it.setTextColor(getProperPrimaryColor())
-        }
+
 
         /*arrayOf(
             settings_color_customization_holder,
@@ -94,38 +88,8 @@ class SettingsActivity : SimpleActivity() {
         }*/
     }
 
-    private fun setupPurchaseThankYou() {
-        settings_purchase_thank_you_holder.beGoneIf(/*isOrWasThankYouInstalled() || */isProVersion())
-        settings_purchase_thank_you_holder.setOnClickListener {
-            launchPurchase() //launchPurchaseThankYouIntent()
-        }
-        moreButton.setOnClickListener {
-            launchPurchase()
-        }
-        val appDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_plus_support, getProperPrimaryColor())
-        purchase_logo.setImageDrawable(appDrawable)
-        val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getProperPrimaryColor())
-        moreButton.background = drawable
-        moreButton.setTextColor(getProperBackgroundColor())
-        moreButton.setPadding(2,2,2,2)
-    }
 
-    private fun setupCustomizeColors() {
-        settings_customize_colors_chevron.applyColorFilter(getProperTextColor())
-        settings_customize_colors_label.text = if (isOrWasThankYouInstalled() || isProVersion()) {
-            getString(R.string.customize_colors)
-        } else {
-            getString(R.string.customize_colors_locked)
-        }
-        settings_customize_colors_holder.setOnClickListener {
-            //handleCustomizeColorsClick()
-            if (isOrWasThankYouInstalled() || isProVersion()) {
-                startCustomizationActivity(false)
-            } else {
-                launchPurchase()
-            }
-        }
-    }
+
 
     private fun setupManageShownContactFields() {
         settings_manage_contact_fields_chevron.applyColorFilter(getProperTextColor())
@@ -500,21 +464,6 @@ class SettingsActivity : SimpleActivity() {
         }
     }
 
-    private fun setupTipJar() {
-        settings_tip_jar_holder.beVisibleIf(isOrWasThankYouInstalled() || isProVersion())
-        settings_tip_jar_chevron.applyColorFilter(getProperTextColor())
-        settings_tip_jar_holder.setOnClickListener {
-            launchPurchase()
-        }
-    }
-
-    private fun setupAbout() {
-        settings_about_chevron.applyColorFilter(getProperTextColor())
-        settings_about_version.text = "Version: " + BuildConfig.VERSION_NAME
-        settings_about_holder.setOnClickListener {
-            launchAbout()
-        }
-    }
 
     private fun launchAbout() {
         val licenses = LICENSE_GLIDE or LICENSE_INDICATOR_FAST_SCROLL
