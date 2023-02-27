@@ -13,11 +13,11 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.leos.contacts"
-        minSdkVersion 23
+        applicationId "com.goodwy.contacts"
+        minSdkVersion 26
         targetSdkVersion 33
-        versionCode 310
-        versionName "3.1.0"
+        versionCode 161
+        versionName "9.11"
         setProperty("archivesBaseName", "contacts")
         buildConfigField("String", "GOOGLE_PLAY_LICENSING_KEY", "\"${getProperty(getProperties('local.properties'), 'GOOGLE_PLAY_LICENSE_KEY')}\"")
         buildConfigField("String", "PRODUCT_ID_X1", "\"${getProperty(getProperties('local.properties'), 'PRODUCT_ID_X1')}\"")
