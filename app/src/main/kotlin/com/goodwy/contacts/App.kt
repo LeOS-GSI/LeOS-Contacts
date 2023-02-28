@@ -22,7 +22,6 @@ class App : Application() {
                 override fun onProductPurchased(productId: String, details: PurchaseInfo?) {}
 
                 override fun onPurchaseHistoryRestored() {
-                    toast(R.string.restored_previous_purchase_please_restart)
                 }
 
                 override fun onBillingError(errorCode: Int, error: Throwable?) {}
