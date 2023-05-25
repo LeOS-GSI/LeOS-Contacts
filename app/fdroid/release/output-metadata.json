@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.leos.contacts",
+  "variantName": "fdroidRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 161,
+      "versionName": "9.12",
+      "outputFile": "contacts-fdroid-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

@@ -281,7 +281,6 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
                 R.id.import_contacts -> tryImportContacts()
                 R.id.export_contacts -> tryExportContacts()
                 R.id.settings -> launchSettings()
-                R.id.about -> launchAbout()
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true

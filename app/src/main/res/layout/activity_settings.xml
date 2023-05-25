@@ -589,7 +589,7 @@
                         style="@style/SettingsTextValueStyle"
                         android:layout_toStartOf="@+id/settings_about_chevron"
                         android:layout_centerVertical="true"
-                        android:text="Version: 1.0.0" />
+                        android:text="Version: 9.13" />
 
                     <ImageView
                         android:id="@+id/settings_about_chevron"
