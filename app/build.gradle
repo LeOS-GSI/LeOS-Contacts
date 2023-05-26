@@ -38,7 +38,7 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix ".debug"
+            applicationIdSuffix ""
         }
         release {
             minifyEnabled true
@@ -53,7 +53,6 @@ android {
     productFlavors {
         core {}
         fdroid {}
-        prepaid {}
     }
 
     sourceSets {
