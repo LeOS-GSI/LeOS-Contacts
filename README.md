@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreround.webp" alt="LeOS_Contacts" align="center">
+<img width="" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp" alt="LeOS_Contacts" align="center">
 
 # LeOS-Contatcs
 
