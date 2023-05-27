@@ -1,0 +1,4 @@
+clone 'Goodwy-Commons'
+open in Android Studio
+run 'Rebuild Project' 
+That's it. 
